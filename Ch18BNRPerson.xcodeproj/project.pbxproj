@@ -70,9 +70,9 @@
 				8957061F1AB67DC2004C4E95 /* BNRPerson.h */,
 				895706201AB67DC2004C4E95 /* BNRPerson.m */,
 				895706381AB6975A004C4E95 /* BNREmployee.h */,
+				895706391AB6975A004C4E95 /* BNREmployee.m */,
 				896F5E571ABD54000011F8B6 /* BNRAsset.h */,
 				896F5E581ABD54000011F8B6 /* BNRAsset.m */,
-				895706391AB6975A004C4E95 /* BNREmployee.m */,
 			);
 			path = Ch18BNRPerson;
 			sourceTree = "<group>";

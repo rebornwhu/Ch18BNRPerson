@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class BNRAsset;
+#import "BNRAsset.h"
 
 @interface BNRPerson : NSObject
 
