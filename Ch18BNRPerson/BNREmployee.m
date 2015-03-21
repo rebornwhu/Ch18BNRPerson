@@ -43,6 +43,19 @@
 }
 
 
+- (void)removeAsset:(NSInteger)i
+{
+    if (!_assets
+        || ([_assets count] - 1 < i)
+        ) {
+        return;
+    }
+    
+    [_assets removeObjectAtIndex:i];
+    
+}
+
+
 - (unsigned int)valueOfAssets
 {
     unsigned int sum = 0;

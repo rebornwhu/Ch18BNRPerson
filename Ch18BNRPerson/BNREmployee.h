@@ -22,6 +22,7 @@
 
 - (double)yearsOfEmployment;
 - (void)addAsset:(BNRAsset *)a;
+- (void)removeAsset:(NSInteger)i;
 - (unsigned int)valueOfAssets;
 
 @end

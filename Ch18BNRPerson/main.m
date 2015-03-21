@@ -13,40 +13,58 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        NSMutableArray *employees = [[NSMutableArray alloc] init];
+//        NSMutableArray *employees = [[NSMutableArray alloc] init];
+//        
+//        for (int i = 0; i < 10; i++) {
+//            BNREmployee *mikey = [[BNREmployee alloc] init];
+//            
+//            mikey.weightInKilos = 90 + i;
+//            mikey.heightInMeters = 1.8 - 1/10.0;
+//            mikey.employeeID = i;
+//            
+//            [employees addObject:mikey];
+//        }
+//        
+//        for (int i = 0; i < 10; i++) {
+//            BNRAsset *asset = [[BNRAsset alloc] init];
+//            NSString *currentLabel = [NSString stringWithFormat:@"Laptop %d", i];
+//            asset.label = currentLabel;
+//            asset.resaleValue = 350 + i * 17;
+//            
+//            NSUInteger randomIndex = random() % [employees count];
+//            
+//            BNREmployee * randomEmployee = [employees objectAtIndex:randomIndex];
+//            
+//            [randomEmployee addAsset:asset];
+//        }
+//        
+//        NSLog(@"Employees: %@", employees);
+//        
+//        NSLog(@"Giving up ownership of one employee");
+//        
+//        [employees removeObjectAtIndex:5];
+//        
+//        NSLog(@"Giving up ownership of arrays");
+//        
+//        employees = nil;
         
-        for (int i = 0; i < 10; i++) {
-            BNREmployee *mikey = [[BNREmployee alloc] init];
-            
-            mikey.weightInKilos = 90 + i;
-            mikey.heightInMeters = 1.8 - 1/10.0;
-            mikey.employeeID = i;
-            
-            [employees addObject:mikey];
-        }
+        // The following code is used for Challenge 2 in chapter 21
+        BNREmployee *employee = [[BNREmployee alloc] init];
         
         for (int i = 0; i < 10; i++) {
             BNRAsset *asset = [[BNRAsset alloc] init];
             NSString *currentLabel = [NSString stringWithFormat:@"Laptop %d", i];
             asset.label = currentLabel;
             asset.resaleValue = 350 + i * 17;
-            
-            NSUInteger randomIndex = random() % [employees count];
-            
-            BNREmployee * randomEmployee = [employees objectAtIndex:randomIndex];
-            
-            [randomEmployee addAsset:asset];
+
+            [employee addAsset:asset];
         }
+        NSLog(@"%@", employee);
         
-        NSLog(@"Employees: %@", employees);
         
-        NSLog(@"Giving up ownership of one employee");
+        [employee removeAsset:5];
+        NSLog(@"%@", employee);
         
-        [employees removeObjectAtIndex:5];
-        
-        NSLog(@"Giving up ownership of arrays");
-        
-        employees = nil;
     }
     return 0;
 }
