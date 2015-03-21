@@ -16,6 +16,12 @@
 }
 
 
+- (NSArray *)assets
+{
+    return [_assets copy];
+}
+
+
 - (double)yearsOfEmployment
 {
     if (self.hireDate) {
@@ -29,17 +35,12 @@
 }
 
 
-- (NSArray *)assets
-{
-    return [_assets copy];
-}
-
-
-- (void)addAssets:(BNRAsset *)a
+- (void)addAsset:(BNRAsset *)a
 {
     if (!_assets) {
         _assets = [[NSMutableArray alloc] init];
     }
+    [_assets addObject:a];
 }
 
 

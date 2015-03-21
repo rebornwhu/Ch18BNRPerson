@@ -20,7 +20,7 @@
 @property (nonatomic, copy) NSArray *assets;
 
 - (double)yearsOfEmployment;
-- (void)addAssets:(BNRAsset *)a;
+- (void)addAsset:(BNRAsset *)a;
 - (unsigned int)valueOfAssets;
 
 @end
