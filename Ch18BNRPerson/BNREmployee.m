@@ -15,7 +15,6 @@
     _assets = [a mutableCopy];
 }
 
-
 - (NSArray *)assets
 {
     return [_assets copy];
