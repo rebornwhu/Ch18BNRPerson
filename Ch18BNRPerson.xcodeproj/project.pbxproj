@@ -10,6 +10,7 @@
 		895706191AB67D89004C4E95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 895706181AB67D89004C4E95 /* main.m */; };
 		895706211AB67DC2004C4E95 /* BNRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 895706201AB67DC2004C4E95 /* BNRPerson.m */; };
 		8957063A1AB6975A004C4E95 /* BNREmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 895706391AB6975A004C4E95 /* BNREmployee.m */; };
+		896F5E591ABD54000011F8B6 /* BNRAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 896F5E581ABD54000011F8B6 /* BNRAsset.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		895706201AB67DC2004C4E95 /* BNRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPerson.m; sourceTree = "<group>"; };
 		895706381AB6975A004C4E95 /* BNREmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNREmployee.h; sourceTree = "<group>"; };
 		895706391AB6975A004C4E95 /* BNREmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNREmployee.m; sourceTree = "<group>"; };
+		896F5E571ABD54000011F8B6 /* BNRAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRAsset.h; sourceTree = "<group>"; };
+		896F5E581ABD54000011F8B6 /* BNRAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRAsset.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				8957061F1AB67DC2004C4E95 /* BNRPerson.h */,
 				895706201AB67DC2004C4E95 /* BNRPerson.m */,
 				895706381AB6975A004C4E95 /* BNREmployee.h */,
+				896F5E571ABD54000011F8B6 /* BNRAsset.h */,
+				896F5E581ABD54000011F8B6 /* BNRAsset.m */,
 				895706391AB6975A004C4E95 /* BNREmployee.m */,
 			);
 			path = Ch18BNRPerson;
@@ -131,6 +136,7 @@
 				8957063A1AB6975A004C4E95 /* BNREmployee.m in Sources */,
 				895706191AB67D89004C4E95 /* main.m in Sources */,
 				895706211AB67DC2004C4E95 /* BNRPerson.m in Sources */,
+				896F5E591ABD54000011F8B6 /* BNRAsset.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

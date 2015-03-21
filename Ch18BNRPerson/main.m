@@ -33,8 +33,6 @@ int main(int argc, const char * argv[]) {
         //NSLog(@"mikey has a BMI of %f", bmi);
         double years = [mikey yearsOfEmployment];
         NSLog(@"BMI of %.2f has worked with us for %.2f years", bmi, years);
-        
-        
     }
     return 0;
 }
