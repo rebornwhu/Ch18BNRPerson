@@ -15,6 +15,8 @@ int main(int argc, const char * argv[]) {
 
         NSMutableArray *employees = [[NSMutableArray alloc] init];
         
+        NSMutableDictionary *executives = [[NSMutableDictionary alloc] init];
+        
         for (int i = 0; i < 10; i++) {
             BNREmployee *mikey = [[BNREmployee alloc] init];
             
@@ -23,6 +25,14 @@ int main(int argc, const char * argv[]) {
             mikey.employeeID = i;
             
             [employees addObject:mikey];
+            
+            if (i ==0) {
+                [executives setObject:mikey forKey:@"CEO"];
+            }
+            
+            if (i == 1) {
+                [executives setObject:mikey forKey:@"CTO"];
+            }
         }
         
         NSMutableArray *allAssets = [[NSMutableArray alloc] init];
@@ -31,7 +41,7 @@ int main(int argc, const char * argv[]) {
             BNRAsset *asset = [[BNRAsset alloc] init];
             NSString *currentLabel = [NSString stringWithFormat:@"Laptop %d", i];
             asset.label = currentLabel;
-            asset.resaleValue = 350 + i * 17;
+            asset.resaleValue = 35 + i * 17;
             
             NSUInteger randomIndex = random() % [employees count];
             
@@ -42,6 +52,10 @@ int main(int argc, const char * argv[]) {
             [allAssets addObject:asset];
         }
         
+        NSSortDescriptor *voa = [NSSortDescriptor sortDescriptorWithKey:@"valueOfAssets" ascending:YES];
+        NSSortDescriptor *eid = [NSSortDescriptor sortDescriptorWithKey:@"employeeID" ascending:YES];
+        [employees sortUsingDescriptors:@[voa, eid]];
+        
         NSLog(@"Employees: %@", employees);
         
         NSLog(@"Giving up ownership of one employee");
@@ -49,6 +63,16 @@ int main(int argc, const char * argv[]) {
         [employees removeObjectAtIndex:5];
         
         NSLog(@"allAssets: %@", allAssets);
+        
+        NSLog(@"executives: %@", executives);
+        
+        NSLog(@"CEO: %@", executives[@"CEO"]);
+        executives = nil;
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"holder.valueOfAssets > 70"];
+        NSArray *toBeReclaimed = [allAssets filteredArrayUsingPredicate:predicate];
+        NSLog(@"toBeReclaimed: %@", toBeReclaimed);
+        toBeReclaimed = nil;
         
         NSLog(@"Giving up ownership of arrays");
         
@@ -77,6 +101,6 @@ int main(int argc, const char * argv[]) {
         
     }
     
-    sleep(100);
+    //sleep(100);
     return 0;
 }
